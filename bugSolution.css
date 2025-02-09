@@ -1,0 +1,13 @@
+The solution is to ensure that the parent container has a defined width, either explicitly through a width property or implicitly through its content:
+
+```css
+.parent {
+  width: 500px; /* or any other fixed or percentage value */
+}
+
+.container {
+  width: calc(50% - 10px);
+}
+```
+
+By providing a defined width for the parent element, the `calc()` function now has a valid value to compute the `50%` from, ensuring that the calculation is performed correctly and the container's width is reliably set.
